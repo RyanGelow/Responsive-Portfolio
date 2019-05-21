@@ -1,0 +1,394 @@
+body {
+    font-family: "PT Sans Narrow", "Georgia", "Times New Roman", "Times", "serif";
+    margin: 0;
+    background-color: #f4f4f4;
+}
+  
+a {
+    color: rgb(0, 66, 104);
+}
+
+/* Footer */
+
+footer p {
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
+
+  /* header */
+  
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+  
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+  
+.bricks_logo {
+    height: 42px;
+    display: block;
+    float: left;
+    padding: 10px 0 10px 20px;
+    text-decoration: none;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 0;
+    text-decoration: none;
+}
+  
+/* menu */
+  
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+  
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+  /* menu btn */
+  
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* Post header margin top for container follow up */
+
+.container {
+    margin: 80px 18px 40px 18px;
+}
+
+/* Index and about me page */
+
+#main-bio,
+#contact-info,
+#bio-image {
+    margin-bottom: 20px;
+}
+
+#main-bio {
+    width: 100%;
+    float: left;
+}
+
+#main-bio p {
+    float: left;
+    width: 50%;
+    margin: 0;
+
+}
+
+#bio-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    float: left;
+}
+
+#contact-info {
+    width: 250px;
+    margin: 0 auto;
+    padding-right: 50px;
+}
+
+#contact-info a {
+    color: rgb(204, 65, 31);
+}
+
+#contact-info a:hover {
+    color: #055d86a6;
+}
+
+.next-line {
+    margin: 0 18px;
+}
+
+/* Contact page */
+    
+/* portfolio page */
+.boxitem {
+    width: 400px;
+    height: 300px;
+    background-image: url("http://lorempixel.com/400/300/");
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+
+.boxitem p {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    background: #055d86a6;
+    text-align: center;
+    color: white;
+}
+
+/* Contact Page */
+.contact-info {
+    width: 250px;
+}
+
+.message {
+    width: 400px;
+    height: 80px;
+
+}
+
+.button {
+    background: #066272;
+    border: solid #055d86a6 2px;
+    font-size: 15px;
+    font-family: "PT Sans Narrow", "Georgia", "Times New Roman", "Times", "serif";
+    color: white;
+    margin-top: 5px;
+    margin-left: 2px;
+
+}
+
+.button:hover {
+    background: white;
+    border: solid #066272 2px;
+    color: #055d86a6;
+}
+
+input.contact-info {
+    height: 18px;
+    font-size: 14px;
+    font-family: "PT Sans Narrow", "Georgia", "Times New Roman", "Times", "serif";
+    margin-bottom: 10px;
+}
+  
+
+/* Responsive Size Large */
+
+
+@media screen and (min-width: 990px) {
+
+/* header menu */
+   
+.header li {
+    float: left;
+}
+    
+.header li a {
+    padding: 20px 20px;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+    
+.header .menu-icon {
+    display: none;
+}
+  
+.section-split a {
+    width: 50%;
+}
+
+/* Clean up after this */
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact {
+    margin-left: 15px;
+}
+
+.container {
+    font-size: 20px;
+    width: 950px;
+    margin: 70px auto;
+}    
+
+#main-bio,
+#contact-info,
+#bio-image {
+    float: left;
+    margin-bottom: 20px;
+}
+
+#main-bio {
+    width: 70%;
+}
+
+#main-bio p {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+#contact-info {
+    width: 30%;
+    padding-right: 0;
+}
+
+#bio-image {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+.next-line p {
+    overflow: auto;
+    width: 950px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+/* portfolio page */
+.boxitem {
+    width: 400px;
+    height: 300px;
+    background-image: url("http://lorempixel.com/400/300/");
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+    align-items: center;
+}
+
+.boxitem p {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    background: #055d86a6;
+    text-align: center;
+    color: white;
+}
+
+/* Contact Page */
+.contact-info {
+    width: 250px;
+}
+
+.message {
+    width: 400px;
+    height: 80px;
+
+}
+
+.button {
+    background: #066272;
+    border: solid #055d86a6 2px;
+    font-size: 15px;
+    font-family: "PT Sans Narrow", "Georgia", "Times New Roman", "Times", "serif";
+    color: white;
+    margin-top: 5px;
+    margin-left: 2px;
+
+}
+
+.button:hover {
+    background: white;
+    border: solid #066272 2px;
+    color: #055d86a6;
+}
+
+input.contact-info {
+    height: 18px;
+    font-size: 14px;
+    font-family: "PT Sans Narrow", "Georgia", "Times New Roman", "Times", "serif";
+    margin-bottom: 10px;
+}
+
+}
